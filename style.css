@@ -17,7 +17,6 @@ nav {
     align-items: center;
     position: sticky;
     top: 0;
-    z-index: 999;
     background-color: black;
     box-shadow: 0 0 5px rgb(199, 117, 9);
     padding: 10px 15px;
@@ -31,19 +30,37 @@ nav h1 a {
     cursor: pointer;
 }
 
-nav .content a {
-    padding: 10px 15px;
+nav .content ul{
+    display: flex;
+    align-items: center;
+}
+
+nav .content ul li {
+    list-style-type: none;
+}
+
+nav .content ul li a {
     text-decoration: none;
+    font-family: sans-serif;
     color: #fff;
-    font-family: cursive;
-    transition: 0.5s ease-in-out;
+    padding: 10px 15px;
+    border-radius: 7px;
+    transition: 0.4s ease-in-out;
 }
 
-nav .content a:hover {
+nav .content ul li a:hover {
+    background: #949494;
+    border: 2px solid red;
+}
+
+#menuIcon {
+    display: none;
+    border: none;
     background: #c77509;
-    border-radius: 5px;
+    font-size: 20px;
+    padding: 7px 15px;
+    border-radius: 8px;
 }
-
 /*----------------------Bagian Home Awal--------------------*/
 
 #home {
@@ -181,7 +198,7 @@ nav .content a:hover {
 }
 
 #projek .content:hover {
-    scale: 1.1;
+    scale: 1.2;
 }
 
 #projek .content p {
@@ -301,6 +318,7 @@ nav .content a:hover {
 
 footer {
     background: #c77509;
+    border: 2px solid #fff;
 }
 
 footer .nav-footer {
@@ -325,8 +343,30 @@ footer .nav-footer p {
         font-size: 25px;
     }
 
-    nav .content a {
-        padding: 10px 10px;
+    nav .content ul {
+        position: absolute;
+        width: 80px;
+        top: 50px;
+        left: 280px;
+        right: 0;
+        border-radius: 8px;
+        overflow: hidden;
+        background-color: #c77509;
+        flex-direction: column;
+        transition: 0.3s ease-in-out;
+    }
+
+    nav .content ul li a {
+        font-size: 18px;
+        color: black;
+    }
+
+    nav .content ul li {
+        padding: 10px;
+    }
+
+    #menuIcon {
+        display: block;
     }
 
     #home .content-title h1 {
