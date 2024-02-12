@@ -17,6 +17,7 @@ nav {
     align-items: center;
     position: sticky;
     top: 0;
+    z-index: 999;
     background-color: black;
     box-shadow: 0 0 5px rgb(199, 117, 9);
     padding: 10px 15px;
@@ -198,7 +199,7 @@ nav .content ul li a:hover {
 }
 
 #projek .content:hover {
-    scale: 1.2;
+    scale: 1.1;
 }
 
 #projek .content p {
@@ -347,8 +348,7 @@ footer .nav-footer p {
         position: absolute;
         width: 80px;
         top: 50px;
-        left: 280px;
-        right: 0;
+        right: 14px;
         border-radius: 8px;
         overflow: hidden;
         background-color: #c77509;
